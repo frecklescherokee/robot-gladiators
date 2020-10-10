@@ -195,10 +195,27 @@ var randomNumber = function(min, max)
     return value;
 };
 
+// Get Player Info function
+var getPlayerName = function() 
+{
+    var name = "";
+    
+    // ***************************************
+    // ADD LOOP HERE WITH PROMPT AND CONDITION
+    // ***************************************
+    while (name === "" || name === null) 
+    {
+        name = prompt("What is your robot's name, bitch?");
+    }
+  
+    console.log("Your robot's name is"  + name);
+    return name;
+};
+
 // Player Info
 var playerInfo = 
 {
-    name: window.prompt("What is your robot's name?"),
+    name: getPlayerName(),
     health: 100,
     attack: 10,
     money: 10,
